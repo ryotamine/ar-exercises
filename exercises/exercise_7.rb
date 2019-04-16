@@ -10,3 +10,13 @@ puts "Exercise 7"
 puts "----------"
 
 # Your code goes here ...
+puts "Enter store name: "
+store_name = gets.chomp
+
+while store_name == ""
+  puts "Please provide store name."
+  store_name = gets.chomp
+end
+
+new_store = Store.create!(name: store_name)
+puts new_store
